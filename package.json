@@ -1,0 +1,17 @@
+{
+  "name": "workform-website",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^2.6.4"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.4",
+    "firebase": "^9.4.1",
+    "mdb-ui-kit": "^3.9.0"
+  }
+}
