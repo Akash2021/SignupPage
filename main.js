@@ -11,8 +11,6 @@ const firebaseApp = initializeApp({
 
 const db = getFirestore()
 
-window.submit_form = submit_form
-
 function submit_form(event) {
   //Prevent Default Form Submission Behavior
   event.preventDefault()
@@ -28,6 +26,7 @@ function submit_form(event) {
   const city = document.getElementById('City').value
   const pinCode = document.getElementById('pinCode').value
   const email = document.getElementById('Email').value
+  console.log(name)
   //Save Form Data To Firebase
   async function uploadData() {
     try {
@@ -44,9 +43,21 @@ function submit_form(event) {
         email,
       })
       alert('Your Form Has Been Submitted Successfully')
+      document.getElementById('name').value = ''
+      document.getElementById('age').value = ''
+      document.getElementById('gender').value = ''
+      document.getElementById('workInterested').value = ''
+      document.getElementById('Aadhar').value = ''
+      document.getElementById('mobile').value = ''
+      document.getElementById('Address').value = ''
+      document.getElementById('City').value = ''
+      document.getElementById('pinCode').value = ''
+      document.getElementById('Email').value = ''
     } catch (e) {
       console.error('Error submitting from, try again.')
     }
   }
   uploadData()
 }
+
+window.submit_form = submit_form
